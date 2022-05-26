@@ -12,12 +12,13 @@
 
 	$sql = "INSERT INTO `usuarios` (`id`, `nome`, `senha`, `email`) VALUES (NULL, '$usuario', '$senha', '$email');";
 	
-	 if (mysqli_query($link, $sql)) {
-	 	echo 'succes';
-	 }
-	 else {
-	 	echo 'failed';
-	 }
+	// erro de sql
+	if (!mysqli_query($link, $sql)) {
+		echo 'failed';
+	}
+	else {
+		echo 'succes';
+ }
 
 
 ?>

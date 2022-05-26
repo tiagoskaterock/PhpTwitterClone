@@ -1,4 +1,4 @@
-<form method="post" action="validar_acesso.php" id="formLogin">
+<form method="post" action="php/validar_acesso.php" id="formLogin">
 	<div class="form-group">
 		<input type="text" class="form-control" id="campo_usuario" name="usuario" placeholder="Usuário" />
 	</div>

@@ -27,6 +27,7 @@
 			// verifica se houve erro de conexão
 			if (mysqli_connect_errno()) {
 				echo 'Erro ao tentar se conectar com o banco de dados. Erro: ' . mysqli_connect_error();
+				die();
 			}
 
 			return $conn;
