@@ -5,7 +5,6 @@ require_once 'db.class.php';
 // confere se não tem usuário ou senha por POST
 if (!isset($_POST['usuario']) || !isset($_POST['senha'])) {
 	header("Location: ..");
-	die();
 }
 
 $usuario = $_POST['usuario'];
@@ -13,19 +12,19 @@ $senha = $_POST['senha'];
 
 // usuário e senha em branco
 if (($usuario == '') && ($senha == '')) {
-	header("Location: ..");
+	header("Location: ..?erro=2");
 	die();
 }
 
 // usuário em branco
 else if(($usuario == '')){
-	header("Location: ..");
+	header("Location: ..?erro=3");	
 	die();
 }
 
 // senha em branco
 else if(($senha == '')){
-	header("Location: ..");
+	header("Location: ..?erro=4");		
 	die();
 }
 

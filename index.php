@@ -20,9 +20,11 @@
 	<!-- bootstrap - link cdn -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	
-	<script>
-			// código javascript						
-		</script>
+
+
+	<script src="js/main.js"></script>
+
+
 	</head>
 
 	<body>
@@ -52,10 +54,33 @@
 
 										<?php include 'includes/modal_entrar.php' ?>	
 
-										<?php if ($erro): ?>
-											<p class="alert alert-warning">
-												Usuário ou senha inválidos
-											</p>		
+										<?php if (isset($erro)): ?>
+											<?php if ($erro == 1): ?>
+												<p class="alert alert-warning">
+													Usuário ou senha inválidos
+												</p>														
+											<?php endif ?>
+
+											<?php if ($erro == 2): ?>
+												<p class="alert alert-warning">
+													Usuário e senha em branco
+												</p>							
+											<?php endif ?>
+
+											<?php if ($erro == 3): ?>
+												<p class="alert alert-warning">
+													Usuário em branco
+												</p>							
+											<?php endif ?>
+
+											<?php if ($erro == 4): ?>
+												<p class="alert alert-warning">
+													Senha em branco
+												</p>							
+											<?php endif ?>
+
+
+
 										<?php endif ?>									
 
 								</ul>
@@ -79,6 +104,8 @@
 
 
 		</div>
+
+
 
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 

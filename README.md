@@ -2,7 +2,7 @@
 
 ## Projeto de estudos que tem a intenção de fazer um clone do website twitter.com.
 
-## Utiliza principalmente BootStrap, PHP e MySQL, Apache
+## Utiliza principalmente jQuery para Javascript, BootStrap para CSS, PHP e SQL com MySQL, com servidor Apache
 
 ### Para rodar o projeto é necessário rodar o dump do banco de dados em sua máquina local, foi utilizado SGBD MySQL 
 
