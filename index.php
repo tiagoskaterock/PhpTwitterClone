@@ -1,3 +1,12 @@
+<?php 
+
+  if (isset($_GET['erro'])) {
+  	$erro = $_GET['erro'];
+  }
+
+?>
+
+
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -34,19 +43,21 @@
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="inscrevase.php">Inscrever-se</a></li>
-						<li class="">
+						<li class="<?= $erro ? 'open' : ''; ?>">
 							<a id="entrar" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entrar</a>
 							<ul class="dropdown-menu" aria-labelledby="entrar">
 								<div class="col-md-12">
 									<p>Você possui uma conta?</h3>
 										<br />
 
-										<?php include 'includes/modal_entrar.php' ?>
-										
+										<?php include 'includes/modal_entrar.php' ?>	
 
+										<?php if ($erro): ?>
+											<p class="alert alert-warning">
+												Usuário ou senha inválidos
+											</p>		
+										<?php endif ?>									
 
-
-									</form>
 								</ul>
 							</li>
 						</ul>

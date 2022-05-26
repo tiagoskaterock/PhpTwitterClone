@@ -1,9 +1,3 @@
-DROP DATABASE IF EXISTS twitter_clone;
-
-CREATE DATABASE twitter_clone;
-
-USE twitter_clone;
-
 -- phpMyAdmin SQL Dump
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
