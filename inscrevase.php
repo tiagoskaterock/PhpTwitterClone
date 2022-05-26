@@ -30,7 +30,7 @@
 	        
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	            <li><a href="index.php">Voltar para Home</a></li>
+	            <li><a href=".">Voltar para Home</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -46,7 +46,7 @@
 	    		<h3>Inscreva-se já.</h3>
 	    		<br />
 
-				<form method="post" action="registra_usuario.php" id="formCadastrarse">
+				<form method="post" action="php/registra_usuario.php" id="formCadastrarse">
 					<div class="form-group">
 						<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required="requiored">
 					</div>
