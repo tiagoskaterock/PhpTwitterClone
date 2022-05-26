@@ -46,6 +46,12 @@
 	    		<h3>Inscreva-se já.</h3>
 	    		<br />
 
+	    		<?php if (isset($_GET['erro']) && $_GET['erro'] == 'usuario_ja_cadastrado'): ?>
+	    			<div class="alert alert-warning">
+	    				Usuário Já cadastrado
+	    			</div>
+	    		<?php endif ?>
+
 				<form method="post" action="php/registra_usuario.php" id="formCadastrarse">
 					<div class="form-group">
 						<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required="requiored">
