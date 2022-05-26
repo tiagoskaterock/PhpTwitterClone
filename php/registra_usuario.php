@@ -1,24 +1,27 @@
 <?php
 
-	require_once('db.class.php');
+require_once('db.class.php');
 
-	$usuario = $_POST['usuario'];
-	$email = $_POST['email'];
-	$senha = $_POST['senha'];
+$usuario = $_POST['usuario'];
+$email = $_POST['email'];
 
-	$obj_db = new db();
+// criando hash para senha
+$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); 
 
-	$link = $obj_db->conecta_mysql();
+// coisas de conexão
+$obj_db = new db();
 
-	$sql = "INSERT INTO `usuarios` (`id`, `nome`, `senha`, `email`) VALUES (NULL, '$usuario', '$senha', '$email');";
-	
-	// erro de sql
-	if (!mysqli_query($link, $sql)) {
-		echo 'failed';
-	}
-	else {
-		echo 'succes';
- }
+$link = $obj_db->conecta_mysql();
 
+$sql = "INSERT INTO `usuarios` (`id`, `nome`, `senha`, `email`) VALUES (NULL, '$usuario', '$senha', '$email');";
 
-?>
+// erro de sql
+if (!mysqli_query($link, $sql)) {
+	echo 'Não foi possível cadastrar o novo usuário';
+	die();
+}
+
+//segue se tudo der certo
+echo 'succes';
+
+header("Location: ..");
