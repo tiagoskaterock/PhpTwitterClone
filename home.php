@@ -85,12 +85,12 @@
 	    		<div class="panel panel-default">
 	    			<div class="panel-body">
 	    				
-	    				<div class="input-group">
-	    					<input type="text" name="conteudo" id="texto-tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
+	    				<form class="input-group" id="form-tweet" method="post" action="">
+	    					<input type="text" name="texto-tweet" id="texto-tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
 	    					<span class="input-group-btn">
 	    						<button class="btn btn-primary" id="btn-tweet" type="button">Tweet</button>
 	    					</span>
-	    				</div>
+	    				</form>
 
 	    			</div>
 	    		</div>
