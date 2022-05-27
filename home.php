@@ -21,6 +21,8 @@
 
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+		<script src="js/home.js"></script>
 	
 	</head>
 
@@ -84,9 +86,9 @@
 	    			<div class="panel-body">
 	    				
 	    				<div class="input-group">
-	    					<input type="text" name="input" id="input" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
+	    					<input type="text" name="conteudo" id="texto-tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
 	    					<span class="input-group-btn">
-	    						<button class="btn btn-primary" type="button">Tweet</button>
+	    						<button class="btn btn-primary" id="btn-tweet" type="button">Tweet</button>
 	    					</span>
 	    				</div>
 
