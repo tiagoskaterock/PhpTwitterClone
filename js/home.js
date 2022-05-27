@@ -19,7 +19,7 @@ $(document).ready( function() {
 				}
 
 			})
-
+			// fim de conecta com script php que faz a conexão
 	
 		}
 
@@ -27,5 +27,18 @@ $(document).ready( function() {
 		$('#texto-tweet').val() = ''
 
 	}) // click
+
+	// atualizar os tweets de forma dinâmica na página
+	function atualizaTweets() {		
+		$.ajax({			
+			url: 'php/get_tweets.php',
+			success: function(data) {
+				$("#tweets").html(data)				
+			}
+		})		
+	}
+	// fim de atualizar os tweets de forma dinâmica na página
+
+	atualizaTweets()
 
 }) // ready

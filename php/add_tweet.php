@@ -1,5 +1,9 @@
 <?php 
 
+/*
+* Este arquivo deve adicionar um tweet ao banco de dado
+*/
+
 session_start();
 
 require_once('db.class.php');

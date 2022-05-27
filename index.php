@@ -1,5 +1,7 @@
 <?php 
 
+	session_start();
+
   if (isset($_GET['erro'])) {
   	$erro = $_GET['erro'];
   }
@@ -44,9 +46,22 @@
 
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="inscrevase">Inscrever-se</a></li>
+
+						<?php if (!isset($_SESSION['usuario_id'])): ?>
+							<li><a href="inscrevase">Inscrever-se</a></li>							
+						<?php endif ?>
+
 						<li class="<?= $erro ? 'open' : ''; ?>">
-							<a id="entrar" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entrar</a>
+
+							<?php if (isset($_SESSION['usuario_id']) && $_SESSION['usuario_id']): ?>
+								<a id="entrar" data-target="#" href="home">Entrar</a>								
+								<li><a href="php/sair.php">Logout</a>								</li>
+							<?php endif ?>
+
+							<?php if (!isset($_SESSION['usuario_id'])): ?>
+								<a id="entrar" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entrar</a>								
+							<?php endif ?>
+
 							<ul class="dropdown-menu" aria-labelledby="entrar">
 								<div class="col-md-12">
 									<p>Você possui uma conta?</h3>

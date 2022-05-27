@@ -43,7 +43,8 @@
 	        
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	            <li><a href="php/sair.php">Sair</a></li>
+	            <li><a href=".">Início</a></li>
+	            <li><a href="php/sair.php">Logout</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -94,6 +95,15 @@
 
 	    			</div>
 	    		</div>
+
+
+
+
+	    		<!-- tweets -->
+	    		<div class="list-group" id="tweets"></div>
+	    		<!-- fim de tweets -->
+
+
 				</div>
 
 
