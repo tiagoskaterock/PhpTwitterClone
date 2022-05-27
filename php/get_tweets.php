@@ -17,7 +17,7 @@ if ($_SESSION['usuario_id'] == null) {
 
 $usuario_id = $_SESSION['usuario_id'];
 
-$sql = "SELECT * FROM `tweets` WHERE usuario_id = '$usuario_id' ORDER BY data_inclusao DESC";
+$sql = "SELECT * FROM `tweets` INNER JOIN usuarios WHERE tweets.usuario_id = '$usuario_id' AND usuarios.id = '$usuario_id' ORDER BY data_inclusao DESC";
 
 // coisas de conexão
 $obj_db = new db();
@@ -35,8 +35,23 @@ $resultado = mysqli_query($link, $sql);
 
 if ($resultado) {
 	while ($registro = mysqli_fetch_assoc($resultado)) {
-		echo '<br>';
-		print_r($resultado);
-		echo '</br>';
+		?>
+		<a class="list-group-item" href="javascript:void(0)">
+			<h4 class="lit-group-item-heading">
+				<?= $registro['nome'] ?> - 
+				<small>
+					<?php 										 
+						$tempo = strtotime($registro['data_inclusao']);
+						$dia = date("d/m/Y - h:i", $tempo);
+					?>
+					<?= $dia ?>
+				</small>			
+			</h4>
+
+			<p class="lit-group-item-text">
+				<?= $registro['conteudo'] ?>
+			</p>
+		</a>			
+		<?php
 	}
 }

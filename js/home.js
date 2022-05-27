@@ -13,6 +13,7 @@ $(document).ready( function() {
 				data: $('#form-tweet').serialize(),
 				success: function(data) {
 					alert('Tweet incluído com sucesso')
+					atualizaTweets()
 
 					// limpa campo de novo tweet
 					$('#texto-tweet').val('')
