@@ -12,12 +12,20 @@ $(document).ready( function() {
 				method: 'post',
 				data: $('#form-tweet').serialize(),
 				success: function(data) {
-					alert(data)
+					alert('Tweet incluído com sucesso')
+
+					// limpa campo de novo tweet
+					$('#texto-tweet').val('')
 				}
+
 			})
+
 	
 		}
 
-	})
+		// limpa o campo após novo tweet
+		$('#texto-tweet').val() = ''
 
-})
+	}) // click
+
+}) // ready
