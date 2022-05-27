@@ -14,6 +14,7 @@ A conexão com o banco precisa ser ajustada de acordo com seu servidor apache lo
 
 Depois é só abrir usando o servidor apache
 
-![twitter_clone](imagens/1.png)
-![twitter_clone](imagens/2.png)
-![twitter_clone](imagens/3.png)
+![Home Page](imagens/0.png)
+![Início](imagens/1.png)
+![increva-se](imagens/2.png)
+![Increva-se com erro de usuário já cadastrado](imagens/3.png)
