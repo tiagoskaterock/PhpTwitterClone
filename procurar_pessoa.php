@@ -22,7 +22,7 @@
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-		<script src="js/home.js"></script>
+		<script src="js/procurar_pessoa.js"></script>
 	
 	</head>
 
@@ -44,6 +44,7 @@
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
 	            <li><a href=".">Início</a></li>
+	            <li><a href="home">Home</a></li>
 	            <li><a href="php/sair.php">Logout</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
@@ -86,10 +87,10 @@
 	    		<div class="panel panel-default">
 	    			<div class="panel-body">
 	    				
-	    				<form class="input-group" id="form-tweet" method="post" action="">
-	    					<input type="text" name="texto-tweet" id="texto-tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
+	    				<form class="input-group" id="form-procurar-pessoa" method="post" action="">
+	    					<input type="text" name="pessoa-nome" id="texto-procurar-pessoa" class="form-control" placeholder="Procurar Pessoa" maxlength="140">
 	    					<span class="input-group-btn">
-	    						<button class="btn btn-primary" id="btn-tweet" type="button">Tweet</button>
+	    						<button class="btn btn-primary" id="btn-procurar-pessoa" type="button">Procurar</button>
 	    					</span>
 	    				</form>
 
@@ -100,7 +101,7 @@
 
 
 	    		<!-- tweets -->
-	    		<div class="list-group" id="tweets"></div>
+	    		<div class="list-group" id="pessoas"></div>
 	    		<!-- fim de tweets -->
 
 
@@ -113,9 +114,7 @@
 				<div class="panel panel-default">
 	    			<div class="panel-body">
 	    				
-	    				<h4>
-	    					<a href="procurar_pessoa">Procurar por pessoas</a>
-	    				</h4>
+	    				
 
 	    			</div>
 	    		</div>

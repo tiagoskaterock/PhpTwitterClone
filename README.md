@@ -18,3 +18,4 @@ Depois é só abrir usando o servidor apache
 ![Início](imagens/1.png)
 ![increva-se](imagens/2.png)
 ![Increva-se com erro de usuário já cadastrado](imagens/3.png)
+![Pesquisa por usuário](imagens/4.png)
