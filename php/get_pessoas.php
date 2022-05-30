@@ -18,18 +18,6 @@ if ($_SESSION['usuario_id'] == null) {
 $usuario_id = $_SESSION['usuario_id'];
 $pessoa_nome = $_POST['pessoa-nome'];
 
-
-$sql = "SELECT * FROM `usuarios` 
-				WHERE 
-				( 
-					nome LIKE '%$pessoa_nome%' 
-					OR email LIKE '%pessoa_nome%'
-				)
-				AND 
-				id <> '$usuario_id'
-				ORDER BY nome LIMIT 50
-				";
-
 $sql = "SELECT * FROM `usuarios` 
 				WHERE 
 				( 
@@ -58,10 +46,13 @@ $resultado = mysqli_query($link, $sql);
 if ($resultado) {
 	while ($registro = mysqli_fetch_assoc($resultado)) {
 		?>
-		<a class="list-group-item" href="javascript:void(0)">
-				<strong><?= $registro['nome'] ?></strong>
-				<strong><?= $registro['email'] ?></strong>
-		</a>	
+		<p class="list-group-item">
+			<strong><?= $registro['nome'] ?></strong>
+			<smail><?= $registro['email'] ?></smail>
+
+			<a href="javascript:void(0)" class="btn btn-sm btn-primary" style="float: right; margin-top: -5px;">Seguir</a>
+		</p>	
+
 		<br>		
 		<?php
 	}
