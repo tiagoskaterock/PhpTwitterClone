@@ -28,21 +28,37 @@ $(document).ready( function() {
 
 						})
 
-					})					
+					}) // fim de btn-seguir
+
+
+
+
+					$('.btn-deixar-de-seguir').click(function() {
+						let id_usuario = $(this).data('id_usuario')
+						
+						$.ajax({
+
+							url: 'php/deixar_de_seguir.php',
+							method: 'post',
+							data: {	seguir_id_usuario: id_usuario	},
+							success: function(data) {
+								alert(data)
+							}
+
+						})
+
+					}) // fim de btn-deixar-de-seguir				
+
+
+
+
 
 				}
 
-			})
-			
-			// fim de conecta com script php que faz a conexão
+			}) // fim de conecta com script php que faz a conexão
 	
 		}
 
-
 	}) // click
-
-
-
-
 
 }) // ready

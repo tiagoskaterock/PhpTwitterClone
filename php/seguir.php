@@ -1,7 +1,7 @@
 <?php 
 
 /*
-* Este arquivo deve adicionar um tweet ao banco de dado
+* Este arquivo deve criar um registro na tabela pivô seguidores entre seguido e seguidor
 */
 
 session_start();
@@ -36,10 +36,10 @@ $link = $obj_db->conecta_mysql();
 
 // erro de sql
 if (!mysqli_query($link, $sql)) {
-	echo 'Erro em seguir usuário';
+	echo 'Erro em seguir usuário ou você já segue este usuário';
 	die();
 }
 else{
-	echo 'success';
+	echo 'Seguindo usuário';
 	die();
 }

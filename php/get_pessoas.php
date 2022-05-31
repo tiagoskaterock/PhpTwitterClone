@@ -48,14 +48,24 @@ if ($resultado) {
 		?>
 		<p class="list-group-item">
 			<strong><?= $registro['nome'] ?></strong>
-			<smail><?= $registro['email'] ?></smail>
+			<smail style="font-size: 0.9em;"><?= $registro['email'] ?></smail>
 
-			<a href="javascript:void(0)" 
-				class="btn btn-sm btn-primary btn-seguir" 
-				style="float: right; margin-top: -5px;"
-				data-id_usuario="<?php echo $registro['id'] ?>">
-				Seguir
-			</a>
+			<span style="float: right; margin-top: -5px;">
+				<!-- botão seguir -->
+				<a href="javascript:void(0)" 
+					class="btn btn-sm btn-primary btn-seguir" 					
+					data-id_usuario="<?php echo $registro['id'] ?>">
+					Seguir
+				</a>
+
+				<!-- botão deixar de seguir -->
+				<a href="javascript:void(0)" 
+					class="btn btn-sm btn-default btn-deixar-de-seguir" 
+					data-id_usuario="<?php echo $registro['id'] ?>">
+					Deixar de Seguir
+				</a>
+				
+			</span>
 		</p>	
 
 		<br>		
