@@ -50,7 +50,12 @@ if ($resultado) {
 			<strong><?= $registro['nome'] ?></strong>
 			<smail><?= $registro['email'] ?></smail>
 
-			<a href="javascript:void(0)" class="btn btn-sm btn-primary" style="float: right; margin-top: -5px;">Seguir</a>
+			<a href="javascript:void(0)" 
+				class="btn btn-sm btn-primary btn-seguir" 
+				style="float: right; margin-top: -5px;"
+				data-id_usuario="<?php echo $registro['id'] ?>">
+				Seguir
+			</a>
 		</p>	
 
 		<br>		

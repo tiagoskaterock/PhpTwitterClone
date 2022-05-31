@@ -12,7 +12,23 @@ $(document).ready( function() {
 				method: 'post',
 				data: $('#form-procurar-pessoa').serialize(),
 				success: function(data) {
-					$('#pessoas').html(data);
+					$('#pessoas').html(data)
+					
+					$('.btn-seguir').click(function() {
+						let id_usuario = $(this).data('id_usuario')
+						
+						$.ajax({
+
+							url: 'php/seguir.php',
+							method: 'post',
+							data: {	seguir_id_usuario: id_usuario	},
+							success: function(data) {
+								alert(data)
+							}
+
+						})
+
+					})					
 
 				}
 
