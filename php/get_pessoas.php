@@ -54,14 +54,16 @@ if ($resultado) {
 				<!-- botão seguir -->
 				<a href="javascript:void(0)" 
 					class="btn btn-sm btn-primary btn-seguir" 					
-					data-id_usuario="<?php echo $registro['id'] ?>">
+					data-id_usuario="<?php echo $registro['id'] ?>"
+					id="btn-seguir-<?= $registro['id'] ?>">
 					Seguir
 				</a>
 
 				<!-- botão deixar de seguir -->
 				<a href="javascript:void(0)" 
 					class="btn btn-sm btn-default btn-deixar-de-seguir" 
-					data-id_usuario="<?php echo $registro['id'] ?>">
+					data-id_usuario="<?php echo $registro['id'] ?>"
+					id="btn-deixar-de-seguir-<?= $registro['id'] ?>">
 					Deixar de Seguir
 				</a>
 				
