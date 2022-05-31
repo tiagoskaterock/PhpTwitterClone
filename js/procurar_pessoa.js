@@ -18,8 +18,8 @@ $(document).ready( function() {
 						let id_usuario = $(this).data('id_usuario')
 
 						// esconde botão de seguir ao clicar e mostra botão deixar de seguir
-						$('#btn-seguir-' + id_usuario).hide();
 						$('#btn-deixar-de-seguir-' + id_usuario).show();
+						$('#btn-seguir-' + id_usuario).hide();
 						
 						$.ajax({
 
@@ -41,8 +41,8 @@ $(document).ready( function() {
 						let id_usuario = $(this).data('id_usuario')
 
 						// mostra botão de seguir ao clicar e esconde botão deixar de seguir
-						$('#btn-deixar-de-seguir-' + id_usuario).hide();
 						$('#btn-seguir-' + id_usuario).show();
+						$('#btn-deixar-de-seguir-' + id_usuario).hide();
 						
 						$.ajax({
 

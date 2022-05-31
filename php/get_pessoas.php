@@ -50,24 +50,59 @@ if ($resultado) {
 			<strong><?= $registro['nome'] ?></strong>
 			<smail style="font-size: 0.9em;"><?= $registro['email'] ?></smail>
 
-			<span style="float: right; margin-top: -5px;">
-				<!-- botão seguir -->
-				<a href="javascript:void(0)" 
-					class="btn btn-sm btn-primary btn-seguir" 					
-					data-id_usuario="<?php echo $registro['id'] ?>"
-					id="btn-seguir-<?= $registro['id'] ?>">
-					Seguir
-				</a>
+			<?php 
 
+				$registro_id = $registro['id'];
+			
+			  // conferindo se mostra botão seguir ou deixra de seguir
+			  $sql2 = "SELECT * FROM seguidores 
+			  	WHERE segue_id = $usuario_id
+			  	AND seguindo_id = $registro_id";
+
+				// coisas de conexão
+				$obj_db2 = new db();
+
+				$link2 = $obj_db2->conecta_mysql();
+
+				$result = mysqli_query($link2, $sql2);
+
+				$seguindo = false;
+
+				// deixar de seguir
+				if ($result->num_rows > 0) {
+					while ($row = mysqli_fetch_assoc($result)) {
+						$seguindo = true;
+					} // fim while
+				} // fim if 
+
+			
+			?>
+
+			<span style="float: right; margin-top: -5px;">
 				<!-- botão deixar de seguir -->
 				<a href="javascript:void(0)" 
 					class="btn btn-sm btn-default btn-deixar-de-seguir" 
 					data-id_usuario="<?php echo $registro['id'] ?>"
 					id="btn-deixar-de-seguir-<?= $registro['id'] ?>">
 					Deixar de Seguir
-				</a>
-				
+				</a>					
 			</span>
+
+			<span style="float: right; margin-top: -5px; <?php if($seguindo){echo 'display: none';} else{echo 'display:  block';}  ?>">
+				<!-- botão seguir -->
+				<a href="javascript:void(0)" 
+					class="btn btn-sm btn-primary btn-seguir" 					
+					data-id_usuario="<?php echo $registro['id'] ?>"
+					id="btn-seguir-<?= $registro['id'] ?>">
+					Seguir
+				</a>									
+			</span>
+
+
+
+
+			
+
 		</p>	
 
 		<br>		
